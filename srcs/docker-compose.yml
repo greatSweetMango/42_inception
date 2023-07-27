@@ -1,1 +1,26 @@
-THIS IS DOCKER-COMPOSE FILE!
+version: '3'
+
+services:
+  nginx:
+    container_name: nginx
+
+    build:
+      context: ./requirements/nginx/
+      dockerfile: ./Dockerfile
+    ports:
+    - 443:443
+    networks:
+      - hyukinet
+
+  wordpress:
+    container_name: wordpress
+
+    build:
+      context: ./requirements/wordpress/
+      dockerfile: ./Dockerfile
+    networks:
+      - hyukinet
+      
+networks:
+  hyukinet:
+    name: hyukinet
