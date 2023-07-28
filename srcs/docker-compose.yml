@@ -5,9 +5,9 @@ volumes:
     name: mariadb
     driver: local
     driver_opts:
-    device: /home/jaehyuki/data
-    o: bind
-    type: none
+      device: /home/jaehyuki/data
+      o: bind
+      type: none
 
 services:
   nginx:
@@ -35,6 +35,7 @@ services:
       - .env
     volumes:
       - mariadb:/var/lib/mysql
+      
 networks:
   hyukinet:
     name: hyukinet
