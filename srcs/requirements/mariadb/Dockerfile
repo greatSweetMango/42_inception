@@ -2,12 +2,16 @@
 FROM debian:bullseye
 
 # 환경 변수 설정
-ENV MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+#ENV MYSQL_ROOT_PASSWORD=1234
 
 # 패키지 업데이트 및 MariaDB 설치
 RUN apt-get update && \
     apt-get install -y mariadb-server && \
     rm -rf /var/lib/apt/lists/*
 
-# 컨테이너 시작 시 MariaDB 서버 실행
-CMD ["mysqld", "--user=root"]
+COPY ./tools/script.sh /
+
+RUN chmod +x /script.sh
+
+# MariaDB 실행 스크립트
+CMD ["/script.sh"]
