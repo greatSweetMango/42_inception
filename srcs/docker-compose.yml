@@ -1,17 +1,10 @@
 version: '3'
 
-volumes:
-  mariadb:
-    name: mariadb
-    driver: local
-    driver_opts:
-      device: /home/jaehyuki/data
-      o: bind
-      type: none
-
+# SERVICES
 services:
   nginx:
     container_name: nginx
+    restart: always
 
     build:
       context: ./requirements/nginx/
@@ -29,13 +22,48 @@ services:
     build:
       context: ./requirements/mariadb/
       dockerfile: ./Dockerfile
+    restart: always
     networks:
       - hyukinet
     env_file:
       - .env
     volumes:
       - mariadb:/var/lib/mysql
+  
+  wordpress:
+    build:
+      context: ./requirements/wordpress/
+      dockerfile: ./Dockerfile
+
+    container_name: wordpress
+    restart: always
+
+    networks:
+      - hyukinet
+    env_file:
+      - .env
+    volumes:
+      - wordpress:/var/www/html
+
+# VOLUMES
+volumes:
+  mariadb:
+    name: mariadb
+    driver: local
+    driver_opts:
+      device: /home/jaehyuki/data/mariadb
+      o: bind
+      type: none
       
+  wordpress:
+    name: wordpress
+    driver: local
+    driver_opts:
+      device: /home/jaehyuki/data/wordpress
+      o: bind
+      type: none
+
+# NETWORKS
 networks:
   hyukinet:
     name: hyukinet
