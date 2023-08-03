@@ -7,18 +7,20 @@ RUN apt-get update && \
     apt-get install sudo && \
     rm -rf /var/lib/apt/lists/*
 
-#RUN chmod +x /run/mysqld/mysqld.sock
-
 COPY ./conf/50-server.cnf /etc/mysql/mariadb.conf.d/
 
-#COPY ./tools/script.sh /
-#RUN chmod +x /script.sh
+#RUN chmod +x /run/mysqld/mysqld.sock
+#COPY ./tools/initdb.sql /initdb.sql
 
-COPY ./tools/initdb.sql /initdb.sql
-RUN /etc/init.d/mariadb start && \
-    mysql -u root -p${MYSQL_ROOT_PASSWORD} < /initdb.sql && \
-    sudo /etc/init.d/mariadb stop
+#RUN /etc/init.d/mariadb start && \
+#    mysql -u root -p${MYSQL_ROOT_PASSWORD} < /initdb.sql && \
+#    sudo /etc/init.d/mariadb stop
 
-# MariaDB 실행 스크립트
-#CMD ["/script.sh"]
-CMD ["mysqld"]
+COPY ./tools/script.sh /script.sh
+RUN chmod +x script.sh
+
+EXPOSE 9000/tcp
+EXPOSE 3306/tcp
+
+CMD ["/script.sh"]
+#CMD ["sleep", "100000"]

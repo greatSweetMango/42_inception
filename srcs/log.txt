@@ -1,0 +1,77 @@
+mkdir: cannot create directory '/var/www/': File exists
+mkdir: cannot create directory '/var/www/html': File exists
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 6766k  100 6766k    0     0  18.0M      0 --:--:-- --:--:-- --:--:-- 18.0M
+Downloading WordPress 6.2.2 (en_US)...
+md5 hash verified: bfc19ba46f9eabb8de90f501e791e61b
+Success: WordPress downloaded.
+PHP Warning:  mysqli_real_connect(): (HY000/1130): Host 'wordpress.hyukinet' is not allowed to connect to this MariaDB server in /var/www/html/wp-includes/class-wpdb.php on line 2019
+Warning: mysqli_real_connect(): (HY000/1130): Host 'wordpress.hyukinet' is not allowed to connect to this MariaDB server in /var/www/html/wp-includes/class-wpdb.php on line 2019
+Error: `Host 'wordpress.hyukinet' is not allowed to connect to this MariaDB server`
+Error establishing a database connection
+This either means that the username and password information in your `wp-config.php` file is incorrect or that contact with the database server at `mariadb` could not be established. This could mean your host’s database server is down.
+
+Are you sure you have the correct username and password?
+Are you sure you have typed the correct hostname?
+Are you sure the database server is running?
+
+If you are unsure what these terms mean you should probably contact your host. If you still need help you can always visit the WordPress support forums. `Host 'wordpress.hyukinet' is not allowed to connect to this MariaDB server`
+PHP Warning:  mysqli_real_connect(): (HY000/1130): Host 'wordpress.hyukinet' is not allowed to connect to this MariaDB server in /var/www/html/wp-includes/class-wpdb.php on line 2019
+Warning: mysqli_real_connect(): (HY000/1130): Host 'wordpress.hyukinet' is not allowed to connect to this MariaDB server in /var/www/html/wp-includes/class-wpdb.php on line 2019
+Error: `Host 'wordpress.hyukinet' is not allowed to connect to this MariaDB server`
+Error establishing a database connection
+This either means that the username and password information in your `wp-config.php` file is incorrect or that contact with the database server at `mariadb` could not be established. This could mean your host’s database server is down.
+
+Are you sure you have the correct username and password?
+Are you sure you have typed the correct hostname?
+Are you sure the database server is running?
+
+If you are unsure what these terms mean you should probably contact your host. If you still need help you can always visit the WordPress support forums. `Host 'wordpress.hyukinet' is not allowed to connect to this MariaDB server`
+PHP Warning:  mysqli_real_connect(): (HY000/1130): Host 'wordpress.hyukinet' is not allowed to connect to this MariaDB server in /var/www/html/wp-includes/class-wpdb.php on line 2019
+Warning: mysqli_real_connect(): (HY000/1130): Host 'wordpress.hyukinet' is not allowed to connect to this MariaDB server in /var/www/html/wp-includes/class-wpdb.php on line 2019
+Error: `Host 'wordpress.hyukinet' is not allowed to connect to this MariaDB server`
+Error establishing a database connection
+This either means that the username and password information in your `wp-config.php` file is incorrect or that contact with the database server at `mariadb` could not be established. This could mean your host’s database server is down.
+
+Are you sure you have the correct username and password?
+Are you sure you have typed the correct hostname?
+Are you sure the database server is running?
+
+If you are unsure what these terms mean you should probably contact your host. If you still need help you can always visit the WordPress support forums. `Host 'wordpress.hyukinet' is not allowed to connect to this MariaDB server`
+PHP Warning:  mysqli_real_connect(): (HY000/1130): Host 'wordpress.hyukinet' is not allowed to connect to this MariaDB server in /var/www/html/wp-includes/class-wpdb.php on line 2019
+Warning: mysqli_real_connect(): (HY000/1130): Host 'wordpress.hyukinet' is not allowed to connect to this MariaDB server in /var/www/html/wp-includes/class-wpdb.php on line 2019
+Error: `Host 'wordpress.hyukinet' is not allowed to connect to this MariaDB server`
+Error establishing a database connection
+This either means that the username and password information in your `wp-config.php` file is incorrect or that contact with the database server at `mariadb` could not be established. This could mean your host’s database server is down.
+
+Are you sure you have the correct username and password?
+Are you sure you have typed the correct hostname?
+Are you sure the database server is running?
+
+If you are unsure what these terms mean you should probably contact your host. If you still need help you can always visit the WordPress support forums. `Host 'wordpress.hyukinet' is not allowed to connect to this MariaDB server`
+PHP Warning:  mysqli_real_connect(): (HY000/1130): Host 'wordpress.hyukinet' is not allowed to connect to this MariaDB server in /var/www/html/wp-includes/class-wpdb.php on line 2019
+Warning: mysqli_real_connect(): (HY000/1130): Host 'wordpress.hyukinet' is not allowed to connect to this MariaDB server in /var/www/html/wp-includes/class-wpdb.php on line 2019
+Error: `Host 'wordpress.hyukinet' is not allowed to connect to this MariaDB server`
+Error establishing a database connection
+This either means that the username and password information in your `wp-config.php` file is incorrect or that contact with the database server at `mariadb` could not be established. This could mean your host’s database server is down.
+
+Are you sure you have the correct username and password?
+Are you sure you have typed the correct hostname?
+Are you sure the database server is running?
+
+If you are unsure what these terms mean you should probably contact your host. If you still need help you can always visit the WordPress support forums. `Host 'wordpress.hyukinet' is not allowed to connect to this MariaDB server`
+sed: can't read /etc/php/7.3/fpm/pool.d/www.conf: No such file or directory
+PHP Warning:  mysqli_real_connect(): (HY000/1130): Host 'wordpress.hyukinet' is not allowed to connect to this MariaDB server in /var/www/html/wp-includes/class-wpdb.php on line 2019
+Warning: mysqli_real_connect(): (HY000/1130): Host 'wordpress.hyukinet' is not allowed to connect to this MariaDB server in /var/www/html/wp-includes/class-wpdb.php on line 2019
+Error: `Host 'wordpress.hyukinet' is not allowed to connect to this MariaDB server`
+Error establishing a database connection
+This either means that the username and password information in your `wp-config.php` file is incorrect or that contact with the database server at `mariadb` could not be established. This could mean your host’s database server is down.
+
+Are you sure you have the correct username and password?
+Are you sure you have typed the correct hostname?
+Are you sure the database server is running?
+
+If you are unsure what these terms mean you should probably contact your host. If you still need help you can always visit the WordPress support forums. `Host 'wordpress.hyukinet' is not allowed to connect to this MariaDB server`
+/script.sh: line 46: /usr/sbin/php-fpm7.3: No such file or directory
+

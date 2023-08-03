@@ -2,19 +2,25 @@ version: '3'
 
 # SERVICES
 services:
-  nginx:
-    container_name: nginx
-    restart: always
+  #nginx:
+  #  container_name: nginx
+  #  restart: always
 
-    build:
-      context: ./requirements/nginx/
-      dockerfile: ./Dockerfile
-    ports:
-    - 443:443
-    networks:
-      - hyukinet
-    env_file:
-      - .env
+  #  build:
+  #    context: ./requirements/nginx/
+  #    dockerfile: ./Dockerfile
+
+  #  depends_on:
+  #    - wordpress
+  #  ports:
+  #  - 443:443
+  #  networks:
+  #    - hyukinet
+  #  env_file:
+  #    - .env
+  #  volumes:
+  #    - wordpress:/var/www/html
+
 
   mariadb:
     container_name: mariadb
@@ -30,20 +36,23 @@ services:
     volumes:
       - mariadb:/var/lib/mysql
   
-  wordpress:
-    build:
-      context: ./requirements/wordpress/
-      dockerfile: ./Dockerfile
+  #wordpress:
+  #  build:
+  #    context: ./requirements/wordpress/
+  #    dockerfile: ./Dockerfile
+  #  container_name: wordpress
+  #  #restart: always
 
-    container_name: wordpress
-    restart: always
-
-    networks:
-      - hyukinet
-    env_file:
-      - .env
-    volumes:
-      - wordpress:/var/www/html
+  #  ports:
+  #    - 9000:9000
+  #  depends_on:
+  #    - mariadb
+  #  networks:
+  #    - hyukinet
+  #  env_file:
+  #    - .env
+  #  volumes:
+  #    - wordpress:/var/www/html
 
 # VOLUMES
 volumes:
