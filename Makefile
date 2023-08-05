@@ -18,7 +18,9 @@ clean :
 	@chmod 744 clean.sh
 	./clean.sh
 fclean : clean
-	rm -rf /hoem/jaehyuki/data
+	rm -rf /home/jaehyuki/data
+
+re : clean up
 
 status : 
 	@docker ps

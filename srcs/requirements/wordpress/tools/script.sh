@@ -22,13 +22,15 @@ mv /var/www/html/wp-config-sample.php /var/www/html/wp-config.php
 mv /wp-config.php /var/www/html/wp-config.php
 
 
-#sed -i -r "s/db1/$WP_DB_NAME/1"   wp-config.php
-#sed -i -r "s/user/$WP_DB_USER/1"  wp-config.php
-#sed -i -r "s/pwd/$WP_DB_PASSWORD/1"    wp-config.php
+sed -i -r "s/wordpress_db_name/$WORDPRESS_DB_NAME/1"   wp-config.php
+sed -i -r "s/wp_db_user/$WP_DB_USER/1"  wp-config.php
+sed -i -r "s/wp_db_password/$WP_DB_PASSWORD/1"    wp-config.php
+sed -i -r "s/wordpress_db_host/$WORDPRESS_DB_HOST/1"    wp-config.php
 
 wp core install --url=$WP_DOMAIN_NAME/ --title=$WP_TITLE --admin_user=$WP_ADMIN_USER --admin_password=$WP_ADMIN_PASSWORD --admin_email=$WP_ADMIN_EMAIL --skip-email --allow-root
 wp user create $WP_USER $WP_USER_EMAIL --role=author --user_pass=$WP_USER_PASSWORD --allow-root
-wp theme install astra --activate --allow-root
+wp theme install twentytwentytwo --activate --allow-root
+
 #wp plugin install redis-cache --activae --allow-root
 wp plugin update --all --allow-root
 sed -i 's/listen = \/run\/php\/php7.4-fpm.sock/listen = 9000/g' /etc/php/7.4/fpm/pool.d/www.conf

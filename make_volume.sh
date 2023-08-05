@@ -1,8 +1,8 @@
 #!/bin/bash
 
-data_directory="${HOME}/data"
-mariadb_directory="${HOME}/data/mariadb"
-wordpress_directory="${HOME}/data/wordpress"
+data_directory="/home/jaehyuki/data"
+mariadb_directory="/home/jaehyuki/data/mariadb"
+wordpress_directory="/home/jaehyuki/data/wordpress"
 
 if [ ! -d "$data_directory" ]; then
     mkdir -p "$data_directory"
