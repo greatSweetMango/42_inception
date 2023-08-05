@@ -8,7 +8,4 @@ RUN openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/nginx/serve
 
 COPY nginx.conf /etc/nginx/nginx.conf
 
-EXPOSE 9000/tcp
-EXPOSE 3306/tcp
-
 CMD ["nginx", "-g", "daemon off;"]

@@ -12,7 +12,6 @@ COPY ./conf/wp-config.php /
 
 RUN chmod +x ./script.sh
 
-EXPOSE 3306/tcp
 EXPOSE 9000/tcp
 
 CMD [ "/script.sh" ]

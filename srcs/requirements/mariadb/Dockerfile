@@ -18,7 +18,6 @@ RUN chmod +x script.sh
 # RUN chmod 777 -R /var/lib/mysql && \
 #     chown -R mysql:mysql /var/lib/mysql
 
-EXPOSE 9000/tcp
 EXPOSE 3306/tcp
 
 CMD ["/script.sh"]

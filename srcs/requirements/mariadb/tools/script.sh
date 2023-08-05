@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# mkdir /var/lib/mysql
-
 # mysql_install_db --user=mysql --ldata=/var/lib/mysql
 # sudo mariadb-secure-installation
 
